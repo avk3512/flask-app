@@ -6,7 +6,7 @@ from forms import LoginForm, RegistrationForm
 
 app = Flask(__name__)
 app.secret_key = urandom(24)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:12345@localhost:5432/road_to_python"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:superuser@localhost:5432/road_to_python"
 db.init_app(app)
 migrate = Migrate(app, db)
 
