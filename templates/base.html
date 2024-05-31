@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="flex">
+        <div class="logo">
+            <a href="{{ url_for('index') }}" class="flex">
+                <div class="left">1nfer</div>
+                <div class="dot">.</div>
+                <div class="right">exe</div>
+            </a>
+        </div>
+        <nav class="flex gap-90">
+            <div class="nav-item">
+                <a href="{{ url_for('authorization') }}">Авторизация</a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ url_for('registration') }}">Регистрация</a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ url_for('profile') }}">Профиль</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

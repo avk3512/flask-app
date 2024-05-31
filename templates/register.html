@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% block title %}Авторизация{% endblock %} 
+{% block content %}
+<h2>Форма регистрации</h2>
+{% if message %}
+    <h3 class="form-message">{{ message }}</h3>
+{% endif %}
+<div class="form-wrapper flex">
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="form-row flex gap-20">
+      <div class="lbl-col">
+        {{ form.username.label }}
+        {{ form.email.label }}
+        {{ form.password.label }}
+        {{ form.password2.label }}
+      </div>
+      <div class="input-col">
+        {{ form.username() }}
+        {{ form.email() }}
+        {{ form.password() }}
+        {{ form.password2() }}
+      </div>
+    </div>
+    <div class="form-row">
+      {{ form.submit() }}
+    </div>
+  </form>
+</div>
+{% endblock %}

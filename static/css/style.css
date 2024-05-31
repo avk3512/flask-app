@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "Reddit";
+    src: url(../fonts/RedditMono-VariableFont_wght.ttf);
+}
+:root {
+    --color-black: rgb(30, 30, 30);
+    --color-black-light: rgb(50, 50, 50);
+    --color-white: rgb(224, 224, 224);
+    --color-gray: rgb(190, 190, 190);
+}
+* {
+    font-family: "Reddit", sans-serif;
+}
+body {
+    margin: 0;
+    background-color: var(--color-black);
+}
+.flex {
+    display: flex;
+}
+.gap-90 {
+    gap: 90px;
+}
+.gap-60 {
+    gap: 60px;
+}
+.gap-20 {
+    gap: 20px;
+}
+header {
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+.dot {
+    position: relative;
+    left: -5px;
+    width: 16px;
+    animation-name: toggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+}
+.logo {
+    position: relative;
+    top: -3px;
+    color: var(--color-white);
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.nav-item {
+    color: var(--color-gray);
+    font-size: 21px;
+    border-bottom: 2px dashed transparent;
+    padding-bottom: 2px;
+    transition: border-bottom 0.2s ease;
+}
+.nav-item:hover {
+    border-bottom: 2px dashed var(--color-gray);
+}
+main {
+    padding: 0 10%;
+}
+h1, h2, h3, p {
+    color: var(--color-gray);
+} 
+h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+.form-message {
+    text-align: center;
+    font-size: large;
+    color: red;
+}
+
+/* Forms */
+.form-wrapper {
+    justify-content: center;
+}
+form {
+    width: fit-content;
+    padding: 30px 50px;
+    border-radius: 10px;
+    animation-name: shadow-form;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+form input, form label {
+    display: block;
+}
+label {
+    color: var(--color-gray);
+}
+.form-row {
+    margin-top: 20px;
+}
+.form-row input {
+    display: block;
+    width: 100%;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    padding: 7px 0;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.input-col input {
+    margin-bottom: 20px;
+}
+.lbl-col label:nth-child(1) {
+    margin-top: 6px;
+}
+.lbl-col label {
+    font-weight: 700;
+    margin-bottom: 36px;
+    text-align: left;
+}
+.input-col input {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+}
+@keyframes toggle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes shadow-form {
+    0% {
+        box-shadow: 5px 5px 20px 3px var(--color-black-light);
+    }
+    25% {
+        box-shadow: -5px 5px 20px 3px var(--color-black-light);
+    }
+    50% {
+        box-shadow: -5px -5px 20px 3px var(--color-black-light);
+    }
+    75% {
+        box-shadow: 5px -5px 20px 3px var(--color-black-light);
+    }
+    100% {
+        box-shadow: 5px 5px 20px 3px var(--color-black-light);
+    }
+}
