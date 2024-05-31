@@ -159,4 +159,17 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+/migrations/versions/5e513a306771_add_more_memory_to_password_hash_to_256.py
+/migrations/versions/6daa89162da0_init.py
+/migrations/versions/543836c3c173_add_more_memory_to_password_hash.py
+/migrations/alembic.ini
+/migrations/env.py
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/migrations/README
+/.idea/road-to-python.iml
+/migrations/script.py.mako
+/.idea/vcs.xml
