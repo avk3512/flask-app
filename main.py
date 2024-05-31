@@ -35,6 +35,8 @@ def registration():
     if registration.validate_on_submit():
         if User.query.filter_by(nickname=registration.username.data).first():
             return render_template("register.html", form=registration, message="Такой пользователь уже существует")
+        if registration.password.data != registration.password2.data:
+            return render_template("register.html", form=registration, message="Пароли не совпадают")
         user = User(nickname=registration.username.data, email=registration.email.data,
                     password=registration.password.data)
         db.session.add(user)
